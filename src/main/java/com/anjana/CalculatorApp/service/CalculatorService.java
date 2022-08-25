@@ -25,6 +25,9 @@ public class CalculatorService {
             case "divide":
                 calculatorResponse.setResult(calculatorRequest.getNumber1() / calculatorRequest.getNumber2());
                 break;
+            case "modulus":
+                calculatorResponse.setResult(calculatorRequest.getNumber1() % calculatorRequest.getNumber2());
+                break;
             default:
                 throw new CalculatorException("not.valid.operation",calculatorRequest.getOperation());
         }
